@@ -1,5 +1,13 @@
 {
-  "homepage": "https://github.com/nehasharma-wd/Krsna.git",
+  "name": "krsna-project",
+  "version": "1.0.0",
+  "description": "A Krsna-themed website",
+  "homepage": "https://nehasharma-wd.github.io/Krsna",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "echo 'No build step needed for static site' && mkdir -p dist && cp -r * dist && rm -rf dist/node_modules dist/.git dist/package*.json"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
