@@ -1,0 +1,6 @@
+{
+  "homepage": "https://github.com/nehasharma-wd/Krsna.git",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
