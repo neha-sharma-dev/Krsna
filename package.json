@@ -6,7 +6,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "echo 'No build step needed for static site' && mkdir -p dist && cp -r * dist && rm -rf dist/node_modules dist/.git dist/package*.json"
+    "build": "echo 'No build step needed for static site' && mkdir dist 2>nul || true && robocopy . dist /E /XD dist node_modules .git && del /Q dist\\node_modules dist\\.git dist\\package*.json 2>nul || true"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
